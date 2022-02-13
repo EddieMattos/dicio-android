@@ -19,6 +19,7 @@
         <item>Ελληνικά</item>
         <item>Français</item>
         <item>Italiano</item>
+        <item>Português(Brasil)</item>
         <item>Русский</item>
     </string-array>
 
@@ -33,6 +34,7 @@
         <item>el</item>
         <item>fr</item>
         <item>it</item>
+        <item>pt_BR</item>
         <item>ru</item>
     </string-array>
 

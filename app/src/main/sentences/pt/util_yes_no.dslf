@@ -1,0 +1,3 @@
+util_yes_no: high
+[yes] sim|(é claro)|certamente|(é isso aí)|positivo|afirmativo|proceda|continue|(vamos|(vamo) lá);
+[no] não|chega(já chega|deu)|parar|para|pare|negativo;

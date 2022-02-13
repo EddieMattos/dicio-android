@@ -1,0 +1,5 @@
+weather: high
+(qual é|como está)|como está o tempo|clima? (em|no|na .where.)?;
+tempo|clima (em|no|na? .where.)?;
+como está lá fora;
+(tem|está)está frio|fresco|vento|ventando|calor|quente|ensolarado|sol|chuva|chuvoso|chovendo (em|no|na .where.)|lá fora?;

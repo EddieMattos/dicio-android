@@ -1,0 +1,10 @@
+.calculator: medium
+calcular|estimar|(quanto é)|(o valor)|(quanto vale)|(encontrar o valor de?) .calculation.;
+
+calculator_operators: low
+[addition] mais|(adicione|adicionar|adicionando|somar|some|somando|somado à?)|(adicionado à?);
+[subtraction] menos|(subtraia|subtrair|subtraindo|subtração de?);
+[multiplication] vezes|(multiplique|multiplicar|multiplicando|multiplicado|multiplicado por?);
+[division] (dividir|divida|divisão|dividindo|dividido por?)|por;
+[power] (elevado ? à? potência de?)|(à potência);
+[square_root] Raíz quadrada de?;
