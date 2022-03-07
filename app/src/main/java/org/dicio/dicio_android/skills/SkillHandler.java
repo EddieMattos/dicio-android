@@ -16,6 +16,7 @@ import org.dicio.dicio_android.skills.lyrics.LyricsInfo;
 import org.dicio.dicio_android.skills.open.OpenInfo;
 import org.dicio.dicio_android.skills.search.SearchInfo;
 import org.dicio.dicio_android.skills.telephone.TelephoneInfo;
+import org.dicio.dicio_android.skills.timer.TimerInfo;
 import org.dicio.dicio_android.skills.weather.WeatherInfo;
 import org.dicio.numbers.NumberParserFormatter;
 import org.dicio.skill.Skill;
@@ -26,7 +27,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import java.util.Random;
 
 public class SkillHandler {
 
@@ -38,6 +38,7 @@ public class SkillHandler {
         add(new OpenInfo());
         add(new CalculatorInfo());
         add(new TelephoneInfo());
+        add(new TimerInfo());
     }};
 
     private static final List<SkillInfo> fallbackSkillInfoList = new ArrayList<SkillInfo>() {{
@@ -145,25 +146,10 @@ public class SkillHandler {
         return result;
     }
 
-    public static List<SkillInfo> getRandomEnabledSkillInfoList(final int maxCount) {
-        final Random random = new Random();
+    public static List<SkillInfo> getEnabledSkillInfoListShuffled() {
         final List<SkillInfo> enabledSkillInfoList = getEnabledSkillInfoList();
-
-        if (enabledSkillInfoList.size() <= maxCount) {
-            Collections.shuffle(enabledSkillInfoList, random);
-            return enabledSkillInfoList;
-
-        } else {
-            final List<SkillInfo> result = new ArrayList<>();
-            while (result.size() < maxCount) {
-                final SkillInfo chosen = enabledSkillInfoList.get(
-                        random.nextInt(enabledSkillInfoList.size()));
-                if (!result.contains(chosen)) {
-                    result.add(chosen);
-                }
-            }
-            return result;
-        }
+        Collections.shuffle(enabledSkillInfoList);
+        return enabledSkillInfoList;
     }
 
 
